@@ -1,0 +1,39 @@
+
+
+Overall - 
+1) Both are used in high traffic websites.
+2) Web framework for python.
+3) Django full stack web development where as the flask is a micro and lightweight.
+*4) Developers needs to keep in mind the needs of individual projects.
+
+Django - 
+
+*1) Django works on "Batteries included" priniciple.
+    (Batteries Included means "all the packages are included" .....decrease dependency on external libs)
+2) Django provides the Functional Admin Interface.
+3) Django comes with a built in template engine that enables developers define the user facing layer . 
+    jinja2 is inspired by Django's Template System. 
+4) Django comes with the built in bootstrapping tool. It allows the developers to 
+    divide the project into multipe new applications.
+*5) Django has ORM system. Using ORM system we can work with widely used databases. 
+    Also by using ORM developers can perform common database operations without writing 
+    queries.
+*6) developers has to build the web applications with the built in features provided making difficult to develop.
+*7) Django is more powerful than Flask.
+*8) Provides robust features to build and eploy cmplex web applications
+*9) Django help developers to build large and complex web applications.
+
+
+Flask - (prototypic applications)
+
+1) Flask is a simple lightweight web framework. it lacks some of the built in features provided by Django. 
+2) Flask templating is based on the jinja2.
+3) Flask won't provide in built ORM system. We have to use SQLAlchemy package to work with databases.
+4) Flask easier to learn than Django since it is micro. It helps the developers to build applications
+    with the web development tools and libs.
+*5)Flask is to accelerate development of simple websites that use "static content". Still have an option to customize the project.
+*6) Useful to build restful APIs. 
+
+
+
+*****   The modern approach to web development is to build restful APIs and we communicate to through HTTP.

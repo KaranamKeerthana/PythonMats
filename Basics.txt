@@ -1,0 +1,357 @@
+
+PYTHON
+------
+
+My MOTO - 
+ 
+1) "Wow, that’s some beautiful code!".
+2) When you’re working on a project that involves complex coding, focus on writing informative comments for that code.
+3) Don’t try to write perfect code; write code that works, and then decide whether to improve your code for that project or move on to something new.
+
+Try "import this" in terminal. You will get directions to write Good Python Code. It is Python Philosophy.
+
+
+
+1) Version:
+- just type 'python' in terminal in linux and command prompt in windows.
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+2) To exit:
+- To exit in linux -> Ctrl+D and in windows -> Ctrl+C 
+- if you to type exit() it works for both the OSs.
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+3)Print():
+- "print()" it is a 'function' and it accepts parameters. If you pass string or assigned variable it prints it to the console.
+- By default, print gives new line statements i.e. every print statement is a new single line will not print at the end of other print statement.
+    Eg: print("I am learning Python")
+        print("I love python)
+        result- 
+        I am learning Python
+        I love Python
+- If you want statements to be at the end of one another then we have to use print(<string>,end="")
+    Eg: print("I am learning Python.",end="")
+        print("I love python)
+        result- 
+        I am learning Python.I love Python
+
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+COMMENTING
+---------
+1) SIngle line comments starts with "#".
+2) There is another commenting structure that starts with '""""' and ends with  '"""' which is called docstring.
+    It is used to describe the functionalities of the class or function or vaiables etc. (It is just a comment)
+
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+NAMING CONVENTIONS
+------------------
+
+-> * Don't keep the names too wordy and general.
+-> Eg: user_info, move_integers, swap_numbers, word_definitions
+
+1) Package in Python
+    - "lowercase" for the name of the Package
+    - Use an underscore as a separator to join multiple words.
+    - keeping a short name (preferably one word long).
+
+2) Module in Python
+    - ( --- similar to Packages --- )
+
+3) * Classes in Python
+    Naming convention in python depends on the type of definiton of class (check on classes below)
+    - " Upper Camel Case " The class name doesn't have "()" in its name.
+    Eg: class PythonTest:
+    - similar to module or package (The class name contains "()" which is a callable class) we can use "lowercase"
+    Eg: class python_test():
+    - Built in classes are lowercase.
+    - Exception classes should always have trailing word as Error.
+
+4) class instance
+    - name of the instance variable is "lowercase".
+    - Have the underscore as a separator while naming a multi-word instance variable.
+    -* Use of single underscore as prefix to tell the programmers that it is private variable or method. 
+        Eg: When you do 
+            from M import *
+            It will not import private variables or methods
+    - Check classes (3rd point) for double underscore.
+
+5) Global names
+    - "lowercase"
+    - The underscore should be used as a separator while forming a variable with multiple words
+
+6) Method names
+    - similar to package 
+    - if you add "_" it is a private method.
+    - if you add "__" it is for mangling method (check third point in classes)
+
+7) * Constants
+    - You should be able to identify a Constant just by looking at its name.
+    - Words should separate by an underscore to form a long constant name.
+    - Generally use capital letters.
+ 
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+OPERATORS
+---------
+
+1) Arithmetic Operations
+    - '+' -> Addition
+    - '-' -> Subtraction
+    - '*' -> Multiplication
+    - '/' -> Division       Eg: 3/2 = 1.5
+    - '%' -> Modulus
+    - '**' -> Exponentation     Eg: 2**3 = 8
+    - '//' -> Floor Division    Eg: 3//2 = 1
+
+2) Bitwise Operators
+    - '&' -> AND
+    - '|' -> OR
+    - '^' -> XOR
+    - '~' -> NOT
+    - '<<' -> zero fill left side
+    - '>>' -> Signed right shift 
+
+3) Membership Operators
+    - 'in' -> Returns 'True' if a sequence with the specified value is present in the object
+        Eg: if 'yth' in Python:
+    - 'not in' -> Returns True if a sequence with the specified value is not present in the object
+        Eg: if 'yth' not in Solid:
+
+(For More check Operators in python in Google)
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+STRING OPERATIONS
+-----------------
+
+1)Changing Case in a String with Methods:
+-> capitalize()
+    - string.capitalize() Converts first character to Capital Letter
+        Eg: 1) python -> Python
+-> title():
+    - string.title() converts the first letter of the word to capital letter.
+        Eg: 1) python -> Python
+-> upper():
+    - string.upper() converts all the letters of the word to capitals.
+        Eg: 1) python -> PYTHON
+-> lower():
+    - string.lower() converts all the capital letters of the word to lower letters.
+        Eg: 1) PYTHON -> python
+
+
+
+
+2) Stripping Whitespace:
+-> rstrip():
+    - strips all the Whitespaces that are there on the right side of the string.
+-> lstrip():
+    - strips all the Whitespaces that are there on the left side of the string.
+-> strip():
+    - strips all the Whitespaces that are there on the both sides of the string.
+
+
+
+3) String Operations (GENERAL):
+
+-> center():
+    - Pads string with specified character
+-> casefold():
+    - It is an aggressive lower() method which convert strings to casefolded strings for caseless matching.
+-> count():
+    - Fetches you the number of occurences of a substring inside the string
+        Eg: 1)  string = "Python is awesome, isn't it?"
+                substring = "is"
+                count = string.count(substring)
+
+                # print count
+                print("The count is:", count)
+                The count is: 2
+-> encode():
+    - Encode the string to 'utf-8' 
+        Eg: string = "python" 
+            print(string.encode())
+            -> b'pyth\xc3\xb6n!
+-> format():
+    1) Positional Arguments
+        Eg: print("Hello {0}, your balance is {1}.".format("Adam", 230.2346))
+    2) Keyword Arguments
+        Eg: print("Hello {name}, your balance is {blc}.".format(name="Adam", blc=230.2346))
+    3) Mixed arguments
+        Eg: print("Hello {0}, your balance is {blc}.".format("Adam", blc=230.2346))
+
+
+
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+LISTS
+-----
+
+samplelist = ["python","java","perl","htmk and css","C#","C"]
+
+-> You can use index for accesing the elements in the list
+    Eg: print(samplelist[0]) -> python
+-> If you want to get the last element use negative infront of the index but in reverse it starts from 1
+    Eg: print(samplelist[-1]) -> C
+        print(samplelist[-2]) -> C#
+        This continues
+
+-> index: Basically it fetches the position or index of the element.
+    samplelist.index('java')
+    -> 1
+
+-> Changing: Basically it overwrites the value in that index
+    samplelist[1] = "javascript"
+    then samplelist becomes   -> samplelist = ["python","javascript","perl","htmk and css","C#","C"]
+
+-> Appending: It append to the end of the list
+    samplelist.append("React JS")
+    then samplelist becomes   -> samplelist = ["python","javascript","perl","htmk and css","C#","C","React JS"]
+
+-> Inserting: To insert at particular position in the list
+    samplelist.insert(1,"Java")
+    then samplelist becomes   -> samplelist = ["python","Java","javascript","perl","htmk and css","C#","C","React JS"]
+
+-> Deleting:
+    Note: If there are duplicates in the list and you want to delete one better go with index based deleting.
+
+    1) Deleting based on index 
+        Eg: del samplelist[0]
+        then the samplelist becomes     samplelist =  ["javascript","perl","htmk and css","C#","C","React JS"]
+    2) Deleting the element using "pop()" (Which deletes the element that is there in the last)
+        Eg: samplelist.pop()
+        the samplelist becomes    samplelist = ["javascript","perl","htmk and css","C#","C"]
+    3) popping elements at that particular index
+        Eg: samplelist.pop(0)
+        the samplelist becomes    samplelist = ["perl","htmk and css","C#","C"]
+    4) Deleting the elements based on value
+        Eg: samplelist.remove("perl")
+        the samplelist becomes    samplelist = ["html and css","C#","C"]
+        Note: If in case of duplicates, if you are deleting a element using remove(), it will delete the first occurence of the element and not the rest.
+
+-> Sort: (It gets you arranged alpahabetically)
+    1) Eg: samplelist.sort()
+        ["C","C#","html and css"]
+    2) If you want to get the reverse of the sorted one.
+        Eg: samplelist.sort(reverse=True)
+        ["html and css","C#","C"]
+    3) "sorted" is for sorting the list temporarily.
+        Eg: sorted(samplelist)
+
+-> reverse: reverse the list
+    Eg: samplelist.reverse()
+
+-> it’s helpful to choose a meaningful name that represents a single item from the list.
+    Eg: for cat in cats:
+
+->* Copy of list:
+    Eg: newlist = samplelist[:]
+    * But not newlist = samplelist. If you do this the python thinks it as the another instance of the samplelist. when you append to newlist the element 
+    appears in samplelist also.
+
+-> concatenation two lists:
+    Eg:
+    test_list3 = [1, 4, 5, 6, 5] 
+    test_list4 = [3, 5, 7, 2, 5] 
+  
+    # using + operator to concat 
+    test_list3 = test_list3 + test_list4 
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+TUPLES
+------
+( similar to lists except that you don't use square brackets"[]" instead you use "()" ).
+
+1) * You can't modify a tuple. We have to redefine the tuple. You cannot add items to tuple it is inchangeable.
+
+2) * Use them when you want to store a set of values that should not be changed throughout the life of a program.
+
+3) Join Two Tuples:
+    Eg: 
+    tuple1 = ("a", "b" , "c")
+    tuple2 = (1, 2, 3)
+
+    tuple3 = tuple1 + tuple2
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+DICTIONARIES
+------------
+
+sample_dict = {'color': 'green', 'points': 5}
+
+-> Each key value pair is separated by  ','  and every key and value has ':' in between. Check the above dictionary
+
+(Each dictionary is a key value pair)
+
+
+(Search in the net everything is similar to lists but depends on the keys and values)
+
+Note: 
+1) Never write dictionary like this ( For every value or list you create it should have a key )
+    Eg: (This is wrong)
+    {
+        [
+            "project": "python"
+        ]
+    }
+
+    (This is right)
+    {
+        "data":[
+            "project":"python"
+        ]
+    }
+2) If you have multiple values for a key
+    {
+        "data":[
+            "languages" : [
+                "java",
+                "python"
+            ],
+            "projects" :[
+                "EG1019",
+                "ETC"
+            ]
+        ]
+    }
+
+    So, in the above dictionary "data" key has multiple values that is why we use a list which is list of dictinaries.
+    'languages' and 'project' are the keys inturn have multiple values so we used list and separated by ',' since languages and projects are two separate keys.
+
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+INPUT
+----
+input() function pauses your program and waits for the user to enter some text
+
+Eg: x = input()
+Eg: name = input("Please enter your name: ")
+    print("Hello, " + name + "!")
+
+    result - 
+
+    Please enter your name: Eric
+    Hello, Eric!
+
+
+Learn Loops FOR, WHILE 
+
+
+<---------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    
+    
+
+

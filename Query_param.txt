@@ -1,0 +1,29 @@
+
+""" The difference lies in where a value is read out in the URL. """
+
+
+
+Query Param - (@QueryParam)
+
+1) It is in the REST.
+2) Read the values ​​from QueryParameters of a URI call.
+3) These are after "?" listed in URL.
+4) Eg -  http://localhost:5000/boq/v1/model/deploy?default=False
+    In above sentence after '?' lies the query parameter 'default=False'
+    Base URL - http://localhost:5000/boq/v1/model/deploy
+    So, everything after 'deploy?' is Query parameter
+
+#
+
+
+
+Path Param - (@PathParam)
+
+1) It reads the value from the path part of an URL.
+2) Eg - http://localhost:5000/boq/v1/model/upload/model
+    Base URL -  http://localhost:5000/boq/v1/model/upload/
+    So,everything after 'upload/' is path parameter
+
+#
+
+

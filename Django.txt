@@ -1,0 +1,68 @@
+
+Django Commands - 
+----------------
+
+1) To create a project in Django 
+
+-> django-admin startproject <myproject>
+
+
+
+2) For running the server
+
+-> python manage.py runserver
+
+
+
+3) For running in the different port number just pass the port number as the argument
+
+-> python manage.py runserver 8080
+
+
+
+4)For creating the apps 
+
+-> python manage.py startapp <name of the app>
+
+Note -  Add the 'name of the app' in <myproject>/settings.py -> 
+INSTALLED_APPS = (
+   'django.contrib.admin',
+   'django.contrib.auth',
+   'django.contrib.contenttypes',
+   'django.contrib.sessions',
+   'django.contrib.messages',
+   'django.contrib.staticfiles',
+   '<name of the app>',
+)
+
+
+
+5) Before accessing the Admin Interface we need to initialise the database
+
+-> python manage.py migrate
+
+
+
+6) 'Superuser'  account that has full access to the site and all needed permissions.
+
+-> python manage.py createsuperuser
+
+
+
+7) For Admin Login Go to URL - http://127.0.0.1:8000/admin/
+
+
+
+8) The Username - z003yfbn , password  - ganga******n
+
+
+
+9) 
+
+
+
+Django - 
+
+*1) Provides the Admin Interface automatically.
+*2) Django Template Language (DTL)..... Replacement for jinja2 templating in Flask.
+*3) from django.db import models ...... Django provides model inbuilt..... but in flask we need to use SQLAlchemy for models

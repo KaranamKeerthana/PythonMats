@@ -1,0 +1,67 @@
+
+
+API - (Application Program Interface)
+
+1) An API takes request , tells the system what to do and returns the response. 
+    Eg: It is like a waiter in the restaurant (Who takes orders from you tells that in the kitchen, and gets the food to Us) .
+2) Eg: When you want book a flight ticket not from the official website of an airlines, the travelling website talks with the airlines APIs where APIs fetch the details
+    of the flights with the requirements to the websites.
+
+
+#
+
+
+
+RESTful API - 
+
+*1)RESTful API is an Application Program Interface(API) which uses 'HTTP' requests to GET,PUT,POST,DELETE data.
+
+*2) It is a service comprised of service operations which has a base URL. Service Operation == base URL + HTTP method
+    Eg:
+        1)  GET http://localhost:5050/extract
+        2)  POSt http://localhost:5050/put
+
+*3) client sends the URL + HTTP method to REST API. REST API contacts with the database. database sends the responds to REST API. REST API returns the response in the form of JSON/XML.
+
+4) Stateless - 
+    HTTP contains all the necessary information to run it, which means that neither the client nor the server need to remember any previous state.
+
+5) HATEOAS -  (Hypermedia As The Engine Of Application State)
+    1) It is a component of the REST . All REST APIs must have the HATEOAS.
+    2) This principle is what ensures that each time a request is made to the server and it returns a response, part of the information it contains will be the browsing hyperlinks .
+    *3) Allows the user to browse the set of objects through "HTML links".
+
+6) Advantages of REST for Development - 
+    1) The REST API is always "independent" of the type of platform or languages.
+    2) Separation between the client and the server.
+
+
+#
+
+
+REST - (Representational State Transfer)
+
+(One of the Pattern in APIs)
+
+**1) REST is any "interface between systems" using "HTTP to obtain data" and generate operations on those data in all possible formats, such as "XML and JSON"(returns data). 
+*2) REST technology is increasingly alternative to SOAP, which is complex.
+3) REST is a logical choice for building APIs that allow users to connect and interact with cloud services.
+4) All REST APIs must have the HATEOAS
+
+
+METHODS - (HTTP Request Methods)
+
+GET
+---
+1) It is used to fetch data from the server.
+2) It cannot have a body(request)
+3) No need of passing 'token' for GET
+
+POST
+----
+1) It is essential to pass 'token' in POST
+
+
+PUT
+---
+1) It is essential to pass 'token' in PUT 

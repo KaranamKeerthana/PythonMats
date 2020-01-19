@@ -1,0 +1,232 @@
+
+React -
+-------
+1) Camel case
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+ES6 - (EcmaScript 6 / EcmaScript 2015)
+--------------------------------------
+
+1) It is a 'standard' that JAVASCRIPT is based upon. SO, ES6 is a new version of JAVASCRIPT.
+
+2) It has many features like classes, templates, arrow functions etc.
+
+3) All popular JS lib and frameworks like Node.js , React JS follow ES6.
+
+*4) ES6 provides two ways to export a module from a file - 'named export' and 'default export'
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+Named Export - 
+--------------
+1) one can have multiple named exports per file.
+2) Then import the specific exports they want surrounded in braces. 
+    eg - 
+    1) <import>  import { MyComponent } from "./MyComponent";        <export>  export const MyComponent = () => {}
+    -> Import all the named exports onto an object:
+    eg-
+    1)  <import>  import * as MainComponents from "./MyComponent";
+#
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+Default Export -
+----------------
+1) One can have only one default export per file. 
+2) we have to specify a name and import 
+    eg - 
+    1)  <import> import MyDefaultComponent from "./MyDefaultExport";          
+    <export>  const MyComponent = () => {}
+              export default MyComponent;
+3) The naming of import is completely independent in default export and we can use any name we like.
+#
+
+
+1) Functional components are called stateless components
+2) Class components are called stateful components
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+Event Listeners in JSX - 
+------------------------
+1) These are written in camel case.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+If statements -
+---------------
+*1) You can not inject an 'if' statement into JSX expression.
+
+function coinToss() {
+  // This function will randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+const pics = {
+  kitty: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-puppy.jpeg'
+};
+
+let img;
+
+// if/else statement begins here:
+if(coinToss() === 'heads'){
+  img = <img src = {pics.kitty}/>
+}
+else{
+  img = <img src={pics.doggy}/>
+}
+
+ReactDOM.render(img,document.getElementById('app'))
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+*****
+For Using Multiple tags - 
+-----------------------
+Eg - 
+const favoriteFoods = (
+  <div>
+    <h1>My Favorite Foods</h1>
+    <ul>
+      <li>Sushi Burrito</li>
+      <li>Rhubarb Pie</li>
+      <li>Nacho Cheez Straight Out The Jar</li>
+      <li>Broiled Grapefruit</li>
+    </ul>
+  </div>
+);
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+*****
+Use of Operator '&&' - 
+----------------------
+const tasty = (
+  <ul>
+    <li>Applesauce</li>
+    { !baby && <li>Pizza</li> }
+    { age > 15 && <li>Brussels Sprouts</li> }
+    { age > 20 && <li>Oysters</li> }
+    { age > 25 && <li>Grappa</li> }
+  </ul>
+);
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+*****
+.map()  in JSX - 
+----------------
+Eg -
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const people = ['Rowe', 'Prevost', 'Gare'];
+
+const peopleLis = people.map(person => <li>{person}</li>);
+
+                             
+// ReactDOM.render goes here:
+ReactDOM.render(<ul>{peopleLis}</ul>,document.getElementById('app'))
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+*****
+Key -
+-----
+1) key is an attribute in the JSX.
+2) Key is used similar to 'id'.
+3) React uses them internally to keep track of lists. If you don’t use keys when you’re supposed to, React might accidentally scramble your list-items into the wrong order.
+**4) Using key for the list is necessary.
+*5) The list-items have memory from one render to the next. When doing to do lists item must “remember” whether it was checked off.
+*6) A list’s order might be shuffled.
+Eg -
+<ul>
+  <li key="li-01">Example1</li>
+  <li key="li-02">Example2</li>
+  <li key="li-03">Example3</li>
+</ul>
+
+For dynamic creation 
+
+const peopleLis = people.map((person,i) =><li key= {'person_' + i} >{person}</li>);
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+React.createElement -
+---------------------
+1) You can write React Code without using JSX at all!!
+2) JSX expression - 
+    const h1 = <h1>Hello world</h1>;
+3) Without JSX - 
+   const h1 = React.createElement(
+        "h1",
+        null,
+        "Hello, world"
+    ); 
+**4) When a JSX element is compiled, the compiler transforms the JSX element into React.createElement(). Every JSX element is secretly a call to React.createElement().
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+Components - 
+------------
+1) A component is a small, reusable chunk of code that is responsible for one job. That Job is often to render some HTML.
+*2) 'react-dom' is for interacting with the DOM. the DOM is used in React applications, but it isn’t part of React.
+3) Component class variable names must begin with capital letters !! ............... class names are written in UpperCamelCase.
+
+React.Component - 
+-----------------
+1) It is a JS class used to create your own component class. To create a componnet you must subclass React.component
+Eg - 
+  class MyComponentClass extends React.Component {
+
+  }
+2)
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+Notes - 
+-----
+1) stateless components in other components by exporting the components in React
+2) We should use 'className' for attribute instead of 'class' in JSX. As class is reserved for JS.
+3) For self closing tags in JSX we should use '/'.
+4) When writing JSX, it’s common to use variables to set attributes.
+    eg: 
+    const sideLength = "200px";
+
+    const panda = (
+    <img 
+        src="images/panda.jpg" 
+        alt="panda" 
+        height={sideLength} 
+        width={sideLength} />
+    );
+5) You can not inject an 'if' statement into JSX expression

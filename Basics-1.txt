@@ -1,0 +1,22 @@
+1) Why no do-while in python?
+PEP (Python Enhancement Proposal) to include do..while is rejected because it contadicts the python
+general format 'statement: indented block' used by every other Python compound statement.
+
+2)why no switch case in python?
+Most programming languages have switch/case because they don't have proper mapping constructs. 
+You cannot map a value to a function, that's why they have it. In python, they have dictionary to save
+a value to the key.
+
+3) Python Exit commands:
+-> quit():
+    1) It is SystemExit exception behind the scenes.
+    2)Nevertheless, quit should not be used in production code
+-> exit():
+    1) It is an alias to quit(). 
+    2) They exist simply to make python easy.
+->* sys.exit():
+    1) It raises the SystemExit exception similar to above.
+    2) Unlike them it is good to use sys.exit() in production above.
+-> os._exit():
+    1) exits the program without calling cleanup handlers, flushing stdio buffers
+    2) Not a standard way.

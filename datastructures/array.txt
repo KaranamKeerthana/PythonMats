@@ -1,0 +1,39 @@
+Array
+-----
+
+The idea is to store multiple items of same type together. 
+This makes it easier to calculate the position of each element by simply adding an offset to a base value
+
+we can think of an array a fleet of stairs where on each step is placed a value. (Top view of stair case).
+
+We can use normal variables (v1, v2, v3, ..) when we have a small number of objects, but if we want to store a large number of instances, 
+it becomes difficult to manage them with normal variables. *The idea of an array is to represent many instances in one variable.
+
+Array elements are accessed by using an integer index. Array index starts with 0 and goes till size of array minus 1.
+
+Disadvantages of an Array in C/C++
+---------------------------------
+1) Allows fixed number of elements to be entered which is deicded at the start of declaration.
+
+
+
+Array in Python
+---------------
+
+1) Unlike the arrays in other languages python has 'list' but it is not data type specific.
+2) For data type specific arrays we need to import array module in python
+    Eg: import array
+        arr = array.array('i', [1, 2, 3]) 
+        for i in range(0,4):
+            print(arr[i])
+3) The rest are same as similar to 'list' in python..
+    Eg: append() , insert(i,x) , pop() , remove()
+4) The basic datatypes that are in python are:
+    -> small - signed , capital - 'usigned'
+    1) 'b' - signed char ......  'B' - usigned char .... python type - 'int'
+    2) 'u' - unicode char 
+    3) 'h' - signed short ...... 'H' - usigned char .... python type - 'int'
+    4) 'i' - signed int ...... 'I' - usigned char .... python type - 'int'
+    5) 'l' - signed long ...... 'L' - usigned char .... python type - 'int'
+    6) 'q' - signed long long ...... 'Q' - usigned char .... python type - 'int'
+    7) 'f' - float ...... 'F'- usigned char .... python type - 'float'

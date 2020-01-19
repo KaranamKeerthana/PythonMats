@@ -1,0 +1,21 @@
+
+CLASSES
+-------
+
+
+(UpperCaseCamelCase convention)
+
+-> In python we define class name with "Capital letter(Starting)".
+    Eg: class PythonTest():
+
+-> Non-public method (private methods of a class) should begin with a single underscore 
+    Eg: def _split(self):
+
+-> Double Underscore is for naming convention it is called "Name Mangling" .
+    In present the variable is stored with the name of the class appended as prefix to that variable
+    Eg: class Test:
+            def __init__(self):
+                self.__baz = 42
+
+    * Here the variable is not stored as "__baz" but stored as "_Test__baz" providing a naming convention to avoid the collisions between the variable with similar name 
+    when Test class got extended to the other class 
